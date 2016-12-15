@@ -1,0 +1,181 @@
+/*//////////////////////////////////////
+	UNIVERSAL
+//////////////////////////////////////*/
+
+* {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-weight: normal;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0;
+	margin: 0;
+	font-weight: normal;
+}
+
+img,
+video {
+	max-width: 100%;
+}
+
+input, button, select, submit {
+	border: none;
+}
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;	
+}
+
+
+
+/*//////////////////////////////////////
+	TEXT TRANSFORM
+//////////////////////////////////////*/
+
+/*Uppercase*/
+button {
+    text-transform: uppercase;
+}
+
+/*Lowercase*/
+
+/*Bold*/
+button,
+thead {
+    font-weight: bold;
+}
+
+
+
+/*//////////////////////////////////////
+	LETTER SPACING
+//////////////////////////////////////*/
+
+
+
+/*//////////////////////////////////////
+	FONTS
+//////////////////////////////////////*/
+
+/*Rightous*/
+h1 {
+    font-family: 'Righteous', cursive;
+}
+
+/*Nunito Sans*/
+button,
+table {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+
+
+/*//////////////////////////////////////
+	COLORS
+//////////////////////////////////////*/
+
+/*GREEN*/
+.teal-bg {
+  background-color: #4abdac;
+}
+
+.teal-txt {
+  color: #4abdac;
+}
+
+/*YELLOW*/
+.yellow-bg {
+  background-color: #f6b736;
+}
+
+.yellow-txt {
+  color: #80bd9e;
+}
+
+/*ORANGE*/
+.orange-bg {
+  background-color: #fe491a;
+}
+
+.orange-txt {
+  color: #fe491a;
+}
+
+/*WHITE*/
+.trans-white {
+    background-color: rgba(229, 229, 229, 0.46);
+}
+
+.white-txt {
+  color: white;
+}
+
+
+
+/*//////////////////////////////////////
+	CAMPER LEADERBOARD
+//////////////////////////////////////*/
+
+@mixin shadow() {
+ -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+@mixin center() {
+    text-align: center;
+    margin: 0 auto;
+}
+
+body {
+    @extend .teal-bg;
+    @extend .white-txt;
+}
+
+.content {
+    @include shadow;
+    @extend .trans-white;
+    max-width: 800px;
+    @include center;
+}
+
+h1 {
+    @include center;
+    padding: 15px 5px;
+    margin: 15px 0;
+    @extend .orange-bg;
+}
+
+button {
+    padding: 6px;
+    margin: 15px 10px;
+    @extend .yellow-bg;
+    @extend .white-txt;
+    @include shadow;
+}
+
+/*//////////////////////////////////////
+	TABLE HEADER
+//////////////////////////////////////*/
+
+table {
+    @include center;
+}
+
+.table-header th {
+    padding: 6px;
+    @extend .orange-bg;
+}
